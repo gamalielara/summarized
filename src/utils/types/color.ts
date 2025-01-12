@@ -4,8 +4,7 @@ export interface ColorScheme {
   tertiary: string;
   textPrimary: string;
   textSecondary: string;
-  backgroundPrimary: string;
-  backgroundSecondary: string;
+  background: string;
 }
 
 export interface AppFont {

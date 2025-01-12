@@ -1,19 +1,62 @@
-import {Text, View} from 'react-native';
-import {APP_FONT_FAMILY} from '../../utils/constants.ts';
-import {useEffect} from 'react';
-import NativeSharedPreferences from '../../utils/specs/NativeSharedPreferences.ts';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
+import styles from './styles.ts';
+import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
 
 const LoginScreen: React.FC = () => {
-  useEffect(() => {
-    console.log('HAI EFFECT ', NativeSharedPreferences.getItem('HAI'));
-  }, []);
+  const onLoginHandler = () => {
+    Keyboard.dismiss();
+
+    if (
+      NativeSharedPreferences.getItem('isLogin') !== 'null' ||
+      NativeSharedPreferences.getItem('userInfo') !== 'null'
+    ) {
+      return;
+    }
+
+    NativeSharedPreferences.setItem('isLogin', 'true');
+    NativeSharedPreferences.setItem(
+      'userInfo',
+      JSON.stringify({
+        username: 'HEHE',
+        profilePricture: 'HAI',
+      }),
+    );
+  };
 
   return (
-    <View>
-      <Text style={{fontFamily: APP_FONT_FAMILY.SF.semibold, fontSize: 20}}>
-        Midnights
-      </Text>
-    </View>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={styles.container}>
+        <View style={styles.loginContainer}>
+          <Text style={styles.title}>...summarized.</Text>
+          <TextInput
+            style={styles.textInput}
+            numberOfLines={1}
+            placeholder={'Enter your email'}
+            inputMode="email"
+          />
+          <TextInput
+            style={styles.textInput}
+            numberOfLines={1}
+            placeholder={'Enter your password'}
+            secureTextEntry={true}
+          />
+          <TouchableOpacity style={styles.loginButton} onPress={onLoginHandler}>
+            <Text style={styles.loginText}>Login</Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 };
 
