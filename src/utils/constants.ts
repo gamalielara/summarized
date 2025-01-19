@@ -10,3 +10,12 @@ const SF: AppFont = {
 export const AppFontFamily = {
   SF,
 };
+
+export enum ScreenName {
+  LOGIN = 'login_screen',
+}
+
+export enum NativeSharedPreferencesKey {
+  IS_LOGGED_IN = 'is_logged_in',
+  USER_INFO = 'user_info',
+}
