@@ -13,7 +13,6 @@ import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
 import {useNavigation} from '@react-navigation/native';
 import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants.ts';
 import {useEffect} from 'react';
-import nativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
 
 const LoginScreen: React.FC = () => {
   const navigation = useNavigation();
