@@ -6,12 +6,13 @@
  */
 
 import React from 'react';
-import LoginScreen from './src/screen/LoginScreen';
+import LoginScreen from '<screens>/LoginScreen';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants.ts';
 import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences.ts';
+import HomeScreen from '<screens>/HomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,13 +21,14 @@ const RootStack = () => {
     NativeSharedPreferencesKey.IS_LOGGED_IN,
   );
 
-  const initialRoute = isLogin ? ScreenName.LOGIN : ScreenName.LOGIN;
+  const initialRoute = isLogin ? ScreenName.HOME : ScreenName.LOGIN;
 
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
       initialRouteName={initialRoute}>
       <Stack.Screen name={ScreenName.LOGIN} component={LoginScreen} />
+      <Stack.Screen name={ScreenName.HOME} component={HomeScreen} />
     </Stack.Navigator>
   );
 };

@@ -10,27 +10,43 @@ import {
 } from 'react-native';
 import styles from './styles.ts';
 import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
+import {useNavigation} from '@react-navigation/native';
+import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants.ts';
+import {useEffect} from 'react';
+import nativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
 
 const LoginScreen: React.FC = () => {
+  const navigation = useNavigation();
+
   const onLoginHandler = () => {
     Keyboard.dismiss();
 
-    if (
-      NativeSharedPreferences.getItem('isLogin') !== 'null' ||
-      NativeSharedPreferences.getItem('userInfo') !== 'null'
-    ) {
-      return;
-    }
-
-    NativeSharedPreferences.setItem('isLogin', 'true');
     NativeSharedPreferences.setItem(
-      'userInfo',
+      NativeSharedPreferencesKey.IS_LOGGED_IN,
+      'true',
+    );
+    NativeSharedPreferences.setItem(
+      NativeSharedPreferencesKey.USER_INFO,
       JSON.stringify({
         username: 'HEHE',
         profilePricture: 'HAI',
       }),
     );
+
+    navigation.navigate(ScreenName.HOME);
   };
+
+  useEffect(() => {
+    if (
+      NativeSharedPreferences.getItem(
+        NativeSharedPreferencesKey.IS_LOGGED_IN,
+      ) !== 'null' ||
+      NativeSharedPreferences.getItem(NativeSharedPreferencesKey.USER_INFO) !==
+        'null'
+    ) {
+      navigation.navigate(ScreenName.HOME);
+    }
+  }, []);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

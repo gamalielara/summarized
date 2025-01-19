@@ -13,6 +13,7 @@ export const AppFontFamily = {
 
 export enum ScreenName {
   LOGIN = 'login_screen',
+  HOME = 'home_screen',
 }
 
 export enum NativeSharedPreferencesKey {
