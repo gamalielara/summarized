@@ -1,4 +1,4 @@
-import {AppFont} from './types/color.ts';
+import {AppFont} from '../types/color.ts';
 
 const SF: AppFont = {
   bold: 'SF-Pro-Text-Bold',

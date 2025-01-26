@@ -10,7 +10,7 @@ import LoginScreen from '<screens>/LoginScreen';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants.ts';
+import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants';
 import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences.ts';
 import HomeScreen from '<screens>/HomeScreen';
 

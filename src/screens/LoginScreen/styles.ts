@@ -39,7 +39,7 @@ export default StyleSheet.create({
   },
   loginText: {
     fontFamily: AppFontFamily.SF.bold,
-    textAlign: "center",
-    color: "white"
-  }
+    textAlign: 'center',
+    color: 'white',
+  },
 });

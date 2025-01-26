@@ -11,7 +11,7 @@ import {
 import styles from './styles.ts';
 import NativeSharedPreferences from '<utils>/specs/NativeSharedPreferences';
 import {useNavigation} from '@react-navigation/native';
-import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants.ts';
+import {NativeSharedPreferencesKey, ScreenName} from '<utils>/constants';
 import {useEffect} from 'react';
 
 const LoginScreen: React.FC = () => {

@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {AppColor} from '<utils>/color.ts';
-import {AppFontFamily} from '<utils>/constants.ts';
+import {AppFontFamily} from '<utils>/constants';
 
 export default StyleSheet.create({
   container: {
@@ -20,5 +20,21 @@ export default StyleSheet.create({
     width: '100%',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
+  },
+  catalogWrapper: {
+    paddingHorizontal: 5,
+    marginTop: 30,
+    width: '100%',
+  },
+  floatingAddButton: {
+    width: 50,
+    aspectRatio: 1,
+    borderRadius: 10,
+    backgroundColor: AppColor.secondary,
+    position: 'absolute',
+    bottom: 10,
+    right: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

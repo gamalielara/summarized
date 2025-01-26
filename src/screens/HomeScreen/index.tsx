@@ -1,10 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {Pressable, Text, View} from 'react-native';
+import {
+  Pressable,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import styles from './styles';
-import {format, addMonths, subMonths} from 'date-fns';
+import {addMonths, format} from 'date-fns';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import {AppColor} from '<utils>/color.ts';
+import CatalogBox from '<components>/CatalogBox';
+import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
 
 const MONTH_FORMAT = 'MMMM yyyy';
 
@@ -15,13 +23,7 @@ const HomeScreen: React.FC = () => {
   const changeMonth = (amountOfMonth: number) => {
     const currentDate = new Date();
 
-    let newMonth: Date;
-
-    if (amountOfMonth >= 0) {
-      newMonth = addMonths(currentDate, Math.abs(amountOfMonth));
-    } else {
-      newMonth = subMonths(currentDate, Math.abs(amountOfMonth));
-    }
+    const newMonth = addMonths(currentDate, amountOfMonth);
 
     setMonthAndYear(format(newMonth, MONTH_FORMAT));
   };
@@ -53,6 +55,39 @@ const HomeScreen: React.FC = () => {
           />
         </Pressable>
       </View>
+      <ScrollView style={styles.catalogWrapper}>
+        <CatalogBox mood={1} timestamp={new Date(Date.now()).getTime()} />
+
+        <CatalogBox
+          mood={2.5}
+          timestamp={new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).getTime()}
+        />
+        <CatalogBox
+          mood={2.5}
+          timestamp={new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).getTime()}
+        />
+        <CatalogBox
+          mood={1}
+          timestamp={new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).getTime()}
+        />
+        <CatalogBox
+          mood={4}
+          timestamp={new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).getTime()}
+        />
+        <CatalogBox
+          mood={3.5}
+          timestamp={new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).getTime()}
+        />
+        <CatalogBox
+          mood={5}
+          timestamp={new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getTime()}
+          isLastBox
+        />
+      </ScrollView>
+
+      <TouchableOpacity style={styles.floatingAddButton}>
+        <FontAwesomeIcon icon={faPlus} size={30} color={AppColor.tertiary} />
+      </TouchableOpacity>
     </View>
   );
 };
