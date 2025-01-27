@@ -56,32 +56,41 @@ const HomeScreen: React.FC = () => {
         </Pressable>
       </View>
       <ScrollView style={styles.catalogWrapper}>
-        <CatalogBox mood={1} timestamp={new Date(Date.now()).getTime()} />
-
+        <CatalogBox
+          mood={1}
+          timestamp={new Date(Date.now()).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
+        />
         <CatalogBox
           mood={2.5}
           timestamp={new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
         <CatalogBox
           mood={2.5}
           timestamp={new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
         <CatalogBox
           mood={1}
           timestamp={new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
         <CatalogBox
           mood={4}
           timestamp={new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
         <CatalogBox
           mood={3.5}
           timestamp={new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).getTime()}
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
         <CatalogBox
           mood={5}
           timestamp={new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).getTime()}
           isLastBox
+          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
         />
       </ScrollView>
 

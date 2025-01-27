@@ -8,6 +8,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     justifyContent: 'space-evenly',
+    marginVertical: 1,
   },
   dateCircle: {
     borderRadius: '100%',
@@ -17,29 +18,28 @@ export default StyleSheet.create({
     marginRight: 5,
     justifyContent: 'center',
   },
-  dateHorizontalLine: {
+  dateVerticalLine: {
     width: 3,
-    height: '120%',
+    height: '100%',
     backgroundColor: AppColor.tertiary,
     position: 'absolute',
-    top: '100%',
-    left: '50%',
+    top: '50%',
+    left: '9%',
     transform: 'translate(-50%, 0)',
   },
-
   dateText: {
     color: AppColor.textSecondary,
     fontFamily: AppFontFamily.SF.bold,
     textAlign: 'center',
   },
-  container: {
-    backgroundColor: AppColor.tertiary,
+  boxContainer: {
     minHeight: 50,
     borderRadius: 10,
     padding: 10,
     marginVertical: 10,
     minWidth: 0,
     maxWidth: '80%',
+    backgroundColor: AppColor.tertiary,
   },
   dateTitle: {
     color: AppColor.textSecondary,
@@ -51,7 +51,7 @@ export default StyleSheet.create({
     marginTop: 5,
     alignItems: 'center',
   },
-  dayDetail: {
+  dayCatalogDetail: {
     marginHorizontal: 10,
   },
   moodText: {
@@ -63,5 +63,25 @@ export default StyleSheet.create({
     color: AppColor.textSecondary,
     fontFamily: AppFontFamily.SF.regular,
     width: '50%',
+  },
+  horizontalDividerLine: {
+    backgroundColor: AppColor.secondary,
+    height: 2,
+    width: '90%',
+    marginTop: 10,
+    marginHorizontal: 'auto',
+    opacity: 0.3,
+  },
+  descriptionTitleText: {
+    fontSize: 16,
+    fontFamily: AppFontFamily.SF.bold,
+    color: AppColor.textSecondary,
+    marginTop: 5,
+  },
+  descriptionText: {
+    fontSize: 14,
+    fontFamily: AppFontFamily.SF.regular,
+    color: AppColor.textSecondary,
+    marginTop: 2,
   },
 });
