@@ -2,7 +2,7 @@ package com.sharedPreferences
 
 import android.content.Context
 import com.facebook.react.bridge.ReactApplicationContext
-import com.nativeSharedPreferences.NativeSharedPreferencesSpec
+import com.nativeModules.NativeSharedPreferencesSpec
 
 class NativeSharedPreferencesModule(reactContext: ReactApplicationContext) :
     NativeSharedPreferencesSpec(reactContext) {

@@ -50,11 +50,11 @@
     "node": ">=18"
   },
   "codegenConfig": {
-    "name": "NativeSharedPreferences",
-    "type": "modules",
+    "name": "NativeModules",
+    "type": "all",
     "jsSrcsDir": "src/utils/specs",
     "android": {
-      "javaPackageName": "com.nativeSharedPreferences"
+      "javaPackageName": "com.nativeModules"
     }
   }
 }
