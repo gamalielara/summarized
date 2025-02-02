@@ -1,6 +1,6 @@
 package com.summarized
 
-import com.nativeModules.sharedPreferences.NativeSharedPreferencesPackage
+import com.reactNativeModules.sharedPreferences.NativeSharedPreferencesPackage
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication

@@ -1,4 +1,4 @@
-package com.nativeModules.database
+package com.reactNativeModules.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -9,6 +9,6 @@ data class DailyCatalog(
     val date: String,
     val timestamp: Long,
     val moodRating: Double,
-    val emotions: List<String>,
+    val emotions: String,
     val highlightOfTheDay: String
 )
