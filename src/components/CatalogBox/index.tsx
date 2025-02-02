@@ -3,7 +3,7 @@ import {Alert, Pressable, Text, View} from 'react-native';
 import styles from './styles.ts';
 import dayjs from 'dayjs';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {AppColor} from '<utils>/color.ts';
+import {AppColor} from '<utils>/constants/color.ts';
 import {MoodDictionary, MoodNames} from '<utils>/constants/mood.ts';
 
 interface Props {
@@ -40,7 +40,7 @@ const CatalogBox: React.FC<Props> = ({
 
       <Pressable
         style={styles.boxContainer}
-        onPress={() => Alert.alert('HAHA')}>
+        onPress={() => Alert.alert('HIHI')}>
         <View style={styles.dayDetailContainer}>
           <FontAwesomeIcon
             icon={MoodDictionary[mood]}

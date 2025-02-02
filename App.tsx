@@ -17,9 +17,9 @@ import HomeScreen from '<screens>/HomeScreen';
 const Stack = createNativeStackNavigator();
 
 const RootStack = () => {
-  const isLogin = NativeSharedPreferences.getItem(
-    NativeSharedPreferencesKey.IS_LOGGED_IN,
-  );
+  const isLogin =
+    NativeSharedPreferences.getItem(NativeSharedPreferencesKey.IS_LOGGED_IN) !==
+    'null';
 
   const initialRoute = isLogin ? ScreenName.HOME : ScreenName.LOGIN;
 

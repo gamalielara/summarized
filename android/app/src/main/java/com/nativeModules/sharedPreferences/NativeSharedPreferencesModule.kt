@@ -1,4 +1,5 @@
-package com.sharedPreferences
+package com.nativeModules.sharedPreferences
+
 
 import android.content.Context
 import com.facebook.react.bridge.ReactApplicationContext

@@ -1,4 +1,4 @@
-package com.sharedPreferences
+package com.nativeModules.sharedPreferences
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule

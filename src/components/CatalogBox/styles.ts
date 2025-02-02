@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {AppColor} from '<utils>/color.ts';
+import {AppColor} from '<utils>/constants/color.ts';
 import {AppFontFamily} from '<utils>/constants';
 
 export default StyleSheet.create({
@@ -13,7 +13,7 @@ export default StyleSheet.create({
   dateCircle: {
     borderRadius: '100%',
     aspectRatio: 1,
-    width: '15%',
+    width: '10%',
     backgroundColor: AppColor.tertiary,
     marginRight: 5,
     justifyContent: 'center',
@@ -24,13 +24,13 @@ export default StyleSheet.create({
     backgroundColor: AppColor.tertiary,
     position: 'absolute',
     top: '50%',
-    left: '9%',
-    transform: 'translate(-50%, 0)',
+    left: '8%',
   },
   dateText: {
     color: AppColor.textSecondary,
     fontFamily: AppFontFamily.SF.bold,
     textAlign: 'center',
+    fontSize: 12,
   },
   boxContainer: {
     minHeight: 50,

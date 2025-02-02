@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {AppColor} from '<utils>/color.ts';
+import {AppColor} from '<utils>/constants/color.ts';
 import {AppFontFamily} from '<utils>/constants';
 
 export default StyleSheet.create({
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
   },
   catalogWrapper: {
     paddingHorizontal: 5,
@@ -32,8 +32,8 @@ export default StyleSheet.create({
     borderRadius: 10,
     backgroundColor: AppColor.secondary,
     position: 'absolute',
-    bottom: 10,
-    right: 5,
+    bottom: 20,
+    right: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },

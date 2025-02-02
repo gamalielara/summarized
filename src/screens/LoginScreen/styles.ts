@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {AppColor} from '<utils>/color';
+import {AppColor} from '<utils>/constants/color.ts';
 import {AppFontFamily} from '<utils>/constants';
 
 export default StyleSheet.create({
@@ -28,11 +28,12 @@ export default StyleSheet.create({
     borderRadius: 20,
     marginTop: 20,
     paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingVertical: 20,
   },
   loginButton: {
     width: '100%',
-    padding: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 15,
     borderRadius: 30,
     marginTop: 30,
     backgroundColor: AppColor.secondary,

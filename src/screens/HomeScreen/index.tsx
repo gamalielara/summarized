@@ -10,7 +10,7 @@ import styles from './styles';
 import {addMonths, format} from 'date-fns';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
-import {AppColor} from '<utils>/color.ts';
+import {AppColor} from '<utils>/constants/color.ts';
 import CatalogBox from '<components>/CatalogBox';
 import {faPlus} from '@fortawesome/free-solid-svg-icons/faPlus';
 
@@ -84,7 +84,7 @@ const HomeScreen: React.FC = () => {
         <CatalogBox
           mood={3.5}
           timestamp={new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).getTime()}
-          highlightOfTheDay="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Quisque ultricies, arcu at feugiat tincidunt, metus magna pulvinar lorem, eget tempor eros lorem vitae magna. Proin id libero vehicula, faucibus ipsum id, ultrices neque. Integer faucibus, mi sit amet pharetra fermentum, ligula magna tincidunt est, ut convallis turpis nulla nec odio. Vivamus ut tincidunt turpis. Duis eget mauris sem. Nam at dolor euismod, tristique metus sit amet, fringilla nulla. Etiam nec luctus erat. Suspendisse potenti. Sed convallis vestibulum justo, ut maximus odio feugiat vel. Phasellus convallis ligula sed risus pharetra, nec volutpat risus vestibulum."
+          highlightOfTheDay=""
         />
         <CatalogBox
           mood={5}

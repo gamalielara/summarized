@@ -1,5 +1,5 @@
 import {Appearance} from 'react-native';
-import {ColorScheme} from './types/color.ts';
+import {ColorScheme} from 'src/utils/types/color.ts';
 
 const LIGHT_COLOR_SCHEME: ColorScheme = {
   primary: '#76a2b7',
@@ -12,11 +12,11 @@ const LIGHT_COLOR_SCHEME: ColorScheme = {
 
 const DARK_COLOR_SCHEME: ColorScheme = {
   primary: '#404258',
-  secondary: '#3c435d',
+  secondary: '#606b95',
   tertiary: '#50577A',
   background: '#404258', // primary color
   textPrimary: '#F4F4F2',
-  textSecondary: '#6B728E', // lighter
+  textSecondary: '#9ba1bc', // lighter
 };
 
 export const AppColor =
