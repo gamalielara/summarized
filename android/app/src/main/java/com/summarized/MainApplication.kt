@@ -12,6 +12,8 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import com.reactNativeModules.database.NativeLocalDatabaseModule
+import com.reactNativeModules.database.NativeLocalDatabasePackage
 
 
 class MainApplication : Application(), ReactApplication {
@@ -23,6 +25,7 @@ class MainApplication : Application(), ReactApplication {
                     // Packages that cannot be autolinked yet can be added manually here, for example:
                     // add(MyReactNativePackage())
                     add(NativeSharedPreferencesPackage())
+                    add(NativeLocalDatabasePackage())
                 }
 
             override fun getJSMainModuleName(): String = "index"

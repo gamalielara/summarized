@@ -1,3 +1,4 @@
+import NativeLocalDatabase from "<utils>/specs/NativeLocalDatabase.ts";
 import React, {useEffect, useState} from 'react';
 import {
   Pressable,
@@ -19,6 +20,15 @@ const MONTH_FORMAT = 'MMMM yyyy';
 const HomeScreen: React.FC = () => {
   const [monthAmount, setMonthAmount] = useState(0);
   const [monthAndYear, setMonthAndYear] = useState<string>('');
+
+  const haha = async () => {
+    const hehe = await NativeLocalDatabase.getDailyCatalog("01-01-2025");
+    console.log("HAHAHA ", hehe);
+  }
+
+  useEffect(() => {
+    haha();
+  }, []);
 
   const changeMonth = (amountOfMonth: number) => {
     const currentDate = new Date();
