@@ -13,7 +13,7 @@ export default StyleSheet.create({
   dateCircle: {
     borderRadius: '100%',
     aspectRatio: 1,
-    width: '10%',
+    width: 50,
     backgroundColor: AppColor.tertiary,
     marginRight: 5,
     justifyContent: 'center',

@@ -6,7 +6,7 @@ import type {TurboModule} from 'react-native';
 import {TurboModuleRegistry} from 'react-native';
 
 export interface Spec extends TurboModule {
-  getMonthCatalogs(month: string): Promise<string>;
+  getMonthCatalogs(firstTimestamp: number, lastDayTimestamp: number): Promise<string>;
 
   addDailyCatalog(catalog: string): Promise<void>;
 

@@ -29,7 +29,7 @@ export default StyleSheet.create({
   floatingAddButton: {
     width: 50,
     aspectRatio: 1,
-    borderRadius: 10,
+    borderRadius: "100%",
     backgroundColor: AppColor.secondary,
     position: 'absolute',
     bottom: 20,

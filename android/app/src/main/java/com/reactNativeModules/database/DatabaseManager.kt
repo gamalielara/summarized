@@ -7,6 +7,6 @@ class DatabaseManager(context: Context) {
     val db: DailyCatalogDatabase = Room.databaseBuilder(
         context,
         DailyCatalogDatabase::class.java,
-        "daily_catalog.db"
+        "database.db"
     ).build()
 }

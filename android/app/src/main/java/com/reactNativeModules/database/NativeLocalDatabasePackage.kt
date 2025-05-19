@@ -5,7 +5,6 @@ import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
-import com.reactNativeModules.sharedPreferences.NativeSharedPreferencesModule
 
 class NativeLocalDatabasePackage : TurboReactPackage() {
     override fun getModule(
@@ -31,6 +30,4 @@ class NativeLocalDatabasePackage : TurboReactPackage() {
             )
         )
     }
-
-
 }

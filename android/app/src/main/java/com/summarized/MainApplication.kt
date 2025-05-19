@@ -12,7 +12,6 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
-import com.reactNativeModules.database.NativeLocalDatabaseModule
 import com.reactNativeModules.database.NativeLocalDatabasePackage
 
 

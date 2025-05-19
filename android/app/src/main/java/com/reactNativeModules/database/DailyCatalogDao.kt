@@ -18,7 +18,7 @@ interface DailyCatalogDao {
     suspend fun deleteDailyCatalog(catalogId: String)
 
     @Query("SELECT * FROM daily_catalog WHERE timestamp BETWEEN :startDate AND :endDate")
-    suspend fun getDailyCatalogInMonth(startDate: String, endDate: String): List<DailyCatalog>
+    suspend fun getDailyCatalogInMonth(startDate: Double, endDate: Double): List<DailyCatalog>
 
     @Query("SELECT * FROM daily_catalog WHERE date IS :dateToQuery")
     suspend fun getCatalogByDate(dateToQuery: String): List<DailyCatalog>

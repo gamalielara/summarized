@@ -18,11 +18,12 @@ class NativeLocalDatabaseModule(reactContext: ReactApplicationContext) :
 
     private val _dbManager = DatabaseManager(reactContext)
 
-    override fun getMonthCatalogs(month: String, promise: Promise) {
+    override fun getMonthCatalogs(firstTimestamp: Double, lastDayTimestamp: Double,  promise: Promise) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val catalog = _dbManager.db.dao.getDailyCatalogInMonth("01-01-2025", "02-01-2025")
-                promise.resolve(catalog?.toString() ?: "{}")
+                val catalog = _dbManager.db.dao.getDailyCatalogInMonth(firstTimestamp, lastDayTimestamp)
+                val catalogJSONStringified = gson.toJson(catalog)
+                promise.resolve(catalogJSONStringified)
             } catch (e: Exception) {
                 promise.reject("Something error, ${e.toString()}")
             }
@@ -51,7 +52,9 @@ class NativeLocalDatabaseModule(reactContext: ReactApplicationContext) :
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val catalog = _dbManager.db.dao.getCatalogByDate(date)
-                promise.resolve(catalog.toString())
+                val catalogJSONStringified = gson.toJson(catalog)
+
+                promise.resolve(catalogJSONStringified)
             } catch (e: Exception) {
                 promise.reject("Error getting database ${e.toString()}")
             }
